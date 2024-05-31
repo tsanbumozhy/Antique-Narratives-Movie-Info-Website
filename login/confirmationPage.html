@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+
+    <!--Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <!--Icons link(fontawesome kit)-->
+    <script src="https://kit.fontawesome.com/704721be89.js" crossorigin="anonymous"></script>
+    <!--Link for mail transfer-->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="./login-main.html"></script>
+
+    <title>Confirmation Page</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo/icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <a href="../home.html"><img src="../images/logo/head_icon.png" alt="logo" height="70px" style="padding-bottom: 15px;"></a>
+            <h3 id="title">Sign Up</h3>
+            <p><br>Enter the Verification code that is sent to your email</p>
+            <form action="" method="post">
+                <div class="input-group">
+                    <div class="input-field" id="keyField">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <input type="text" id="key" name="key" placeholder="key" onkeypress="return /[0-9]/i.test(event.key)">
+                    </div>
+                </div>
+                <p style="font-size: small;"> <a href="./login-main.html">Click here!</a> to choose a different email id</p>
+                <br>
+                <div class="btn-field">
+                    <button type="submit" value="submit" name="save" id="submitBtn">submit</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    let code = Math.floor(Math.random() * (999999 - 111111 + 1) + 111111);
+
+    let key = document.getElementById("key");
+    key = key.value;
+    email = localStorage["email"];
+
+    sendEmail(email, code);
+
+    submitBtn.onclick = function() {
+        if (key == code){
+            alert("Email ID is verified.");
+        }else {
+            alert("Please enter an existing email address.");
+        }
+    }    
+
+    function sendEmail(email, code){
+        Email.send({
+        Host: "smtp.gmail.com",
+        Username : "21pw03@psgtech.ac.in",
+        Password : "d21pw13@nbu",
+        To : '21pw03@psgtech.ac.in',
+        From : "21pw03@psgtech.ac.in",
+        Subject : "<email subject>",
+        Body : "Your verification key for antique narratives is ".code,
+        }).then(
+            message => alert("mail sent successfully")
+        );
+        return true;
+        }
+
+</script>
+</html>

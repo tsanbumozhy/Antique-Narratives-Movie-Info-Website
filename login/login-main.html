@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+
+    <!--Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <!--Icons link(fontawesome kit)-->
+    <script src="https://kit.fontawesome.com/704721be89.js" crossorigin="anonymous"></script>
+    <!--Link for mail transfer-->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo/icon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <a href="./login-main.html"><img src="../images/logo/head_icon.png" alt="logo" height="70px" style="padding-bottom: 10px;"></a>
+            <h5 id="title">Sign Up</h5>
+            <form action="./signup.php" method="post">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" name="Name" placeholder="Name">
+                    </div>
+
+                    <div class="input-field" id="emailField">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" name="Email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field" id="pwdField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" name="Password" placeholder="Password">
+                    </div>
+
+                    <div class="input-field" id="re-pwdField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="re-pwd" placeholder="Re-type Password">
+                    </div>
+
+                    <p>Forgot password? <a href="./forgot.html">Click here!</a><br><br></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" value="submit" name="signup" id="signupBtn">Sign up</button>
+                    <button type="submit" value="submit" name="login" id="loginBtn" class="disable">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    let signupBtn = document.getElementById("signupBtn");
+    let loginBtn = document.getElementById("loginBtn");
+    let email = document.getElementById("email");
+    let name = document.getElementById("name");
+    let emailField = document.getElementById("emailField");
+    let nameField = document.getElementById("nameField");
+    let pwdField = document.getElementById("pwdField");
+    let pwd = document.getElementById("password");
+    let chkpwdField = document.getElementById("re-pwdField");
+    let chkpwd = document.getElementById("re-pwd");
+    let title = document.getElementById("title");
+    title.innerHTML == "Sign Up";
+    
+    loginBtn.onclick = function(){
+        if (title.innerHTML == "Sign Up"){
+            nameField.style.visibility = "hidden";
+            chkpwdField.style.visibility = "hidden";
+            nameField.style.maxHeight = "0";
+            chkpwdField.style.maxHeight = "0";
+            title.innerHTML = "Login";
+            signupBtn.classList.add("disable");
+            loginBtn.classList.remove("disable");
+            return false;
+        }
+        else{
+            if (ValidateEmail()){
+                return;
+            }else{
+                return false;
+            }
+        }
+    }
+    
+    signupBtn.onclick = function(){
+        if (title.innerHTML == "Login"){
+            nameField.style.visibility = "visible";
+            chkpwdField.style.visibility = "visible";
+            nameField.style.maxHeight = "60px";
+            chkpwdField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            loginBtn.classList.add("disable");
+            return false;
+        }
+        else{
+                if (ValidateEmail() && ValidatePassword()){
+                    return;
+                }else{
+                    alert("Invalid details")
+                    return false;
+                }
+            }
+    }
+    
+    function ValidateEmail(){
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;        
+    
+        if(email.value.match(mailformat)){
+            return true;
+        }
+        else{
+            alert("You have entered an invalid email address!");
+            return false;
+        }
+    }
+    
+    function ValidatePassword(){
+    
+        if (name.value == null || name.value == ""){  
+            alert("Name cannot be blank");  
+            return false;  
+        }
+        else if(pwd.value.length<6){  
+            alert("Password must be at least 6 characters long.");  
+            return false;  
+        }
+    
+        return rechk_Password();
+    }
+    
+    function rechk_Password(){
+    
+        if (pwd.value == chkpwd.value){  
+            return true;  
+        }  
+        else{  
+            alert("Both passwords do not match!");  
+            return false;
+        }
+    }
+</script>

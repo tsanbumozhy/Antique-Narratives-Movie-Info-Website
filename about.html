@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./css/stylesheet.css" rel="stylesheet">
+
+    <!--Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    <!--Icons link(fontawesome kit)-->
+    <script src="https://kit.fontawesome.com/704721be89.js" crossorigin="anonymous"></script>
+
+    <title>antique narratives</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/icon.png">
+</head>
+
+<header>
+    <a href="./home.html"><img src="./images/logo/head_icon.png" alt="header-icon" height="80px"></a>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
+    <!-- Use any element to open the sidenav -->
+    <span onclick="openNav()">
+        <i class="fa-solid fa-bars" style="float: right; margin-right: 3.1%; margin-top: 2.5%; font-size: x-large;"></i>
+    </span>
+    
+
+    <button class="btn btn-outline-success" 
+        style="background-color: black; color: white; float: right; margin-top: 2%; margin-right: 3.25%;">
+        logged in
+    </button>
+    
+</header>
+
+<nav class="navbar navbar-expand-xl" style="font-family: 'apertureregular';">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="justify-content: space-around;" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-space-around">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"> Home &ensp;|</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">&ensp;watch list &ensp;|</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">&ensp;likes &ensp;|</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">&ensp;movies &ensp;|</a>
+                </li>  
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">&ensp;tv shows </a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrap">
+            <form class="d-flex justify-content-end align-items-end" role="search">
+                <div class="p-2">
+                    <input class="form-control me-2" type="search" placeholder="Search" id="query" aria-label="Search">
+                </div>
+                <div class="p-2">
+                    <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<style>
+    .text{
+        font-family: 'Comfortaa', cursive;
+    }
+
+    .text h1{
+        margin: 20px;
+        line-height: 10px;
+        text-align: center;
+    }
+    .about_text{
+        margin: 40px;
+    }
+</style>
+<body> 
+    <div class="text">
+        <br><h1>About</h1>
+        <p class="about_text">
+            Welcome to the most preeminent destination for equisite movie criticicm. You will witness 
+            nothing short of insightful and engaging reviews of the latest works in the entertainment industry 
+            to hit both the big screen and small screen. Our team of two, Anbumozhy T.S. and Nandika Suresh, 
+            and their passion for movies, years of essential reviews, and ability to connect with readers 
+            serve as the site's foundation. <br><br>We bring to our users not only current reviews of films 
+            from major studios, but one of the most comprehensive coverage of reviews from independent and 
+            documentary film makers, as well as reviews of leading television or cable series and shows from 
+            various streaming platforms. <br><br>We're committed to creating a vibrant and welcoming community 
+            of movie lovers, and we invite you to join us.
+            <br><br>So sit back, grab your popcorn and join in the conversation!
+        </p>
+    </div>
+</body>
+<footer>
+    <ul>
+        <li>Site Index</li>
+        <li>&emsp;About&emsp;</li>
+        <li>Contact Us</li>
+    </ul>
+
+    <ul>
+        <li>
+            <a href="https://www.instagram.com/antiquenarratives_/"  target="_blank">
+                <i class="fa-brands fa-instagram" style="color: white; font-size: xx-large;"></i>&emsp;
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/antiqnarratives"  target="_blank">
+                <i class="fa-brands fa-twitter" style="color: white; font-size: xx-large;"></i>&emsp;
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@antiquenarratives"  target="_blank">
+                <i class="fa-brands fa-youtube" style="color: white; font-size: xx-large;"></i>&emsp;
+            </a>
+        </li>
+    </ul>
+
+    <p>&emsp;&emsp;&copy; 2023 by antique narratives</p>
+</footer>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link href="../css/stylesheet.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+
+    <!--Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+
+    <!--Icons link(fontawesome kit)-->
+    <script src="https://kit.fontawesome.com/704721be89.js" crossorigin="anonymous"></script>
+
+    <title>Forgot password</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo/icon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <a href="../home.html"><img src="../images/logo/head_icon.png" alt="logo" height="70px" style="padding-bottom: 15px;"></a>
+            <h3 id="title">Forgot Password</h3>
+            <form action="">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <p>By clicking "Reset Password" we will send a password reset link <br><br></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="resetbtn">Reset Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script>
+
+let resetbtn = document.getElementById("resetbtn");
+let title = document.getElementById("title");
+
+resetbtn.onclick = function(){
+    title.innerHTML = "Reset Password";
+}
+
+</script>
+</body>
+</html>

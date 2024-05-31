@@ -1,0 +1,10 @@
+.sec-1{
+    margin: 3%;
+    margin-left: 5%;
+}
+
+.sec-1 .banner{
+    margin: 2%;
+    margin-left: 0;
+    display: flex;
+}

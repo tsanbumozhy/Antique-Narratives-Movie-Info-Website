@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'apertureregular';
+    src: url('aperture2.0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+html{
+    position: relative;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+header{
+    margin-top: 15px;
+    margin-left: 2%;
+}
+
+
+.navbar{
+    background-color: black;
+    color: white;
+    padding: 0;
+}
+
+.navbar .container .collapse ul li a{
+    color: white;
+    font-size: x-large;
+}
+
+.navbar .container .collapse ul li a:hover{
+    color: green;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+  
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: medium;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+  
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Footer CSS */
+footer{
+    color: white;
+    background-color: black;
+    font-family: 'apertureregular';
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    padding-top: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 25%;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0;
+}
+
+footer ul li{
+    display: inline;
+    font-size: 20px;
+}
+
+footer ul li:hover{
+    color: green;
+}
+
+/* Body CSS */
+
+
+/*imdb*/
+.imdb{
+    margin-bottom: 25%;
+    width: 100%;
+}
+
+.imdb ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imdb li{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px 10px 0 10px;
+    align-items: center;
+    text-align: center;
+    max-width: 320px;
+    height: 600px;
+    max-width: 600px;
+    background: rgba(231, 231, 231, 0.849);
+    color: black;
+    border-style: ridge;
+}
+
+.imdb ul a{
+    color: black;
+}
+
+.imdb ul a:visited {
+    color: transparent;
+    text-decoration: none;
+    border: black 0.5px;
+    border-style: solid;
+  }
+
+.imdb ul a:hover{
+    border: black 0.5px;
+    border-style: solid;
+}
+
+.imdb li img{
+    max-width: 300px;
+    height: 445px;
+    border-radius: 12px;
+}
+
+.imdb .others li{
+    height: 400px !important;
+    max-width: 280px;
+}
+
+.imdb .others li img{
+    height: 300px !important;
+    width: 270px;
+}
+
+.imdb li h2{
+    font-size: 1.8em;
+    padding: 15px 0 10px 0;
+    margin-top: auto;
+    font-family: "Oswald", sans-serif;
+    color: black;
+}
+
+.imdb li h2:hover{
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.imdb li p{
+    color: black !important;
+}
